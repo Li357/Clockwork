@@ -1,3 +1,3 @@
 # Clockwork
 
-A description of this package.
+macOS status bar app that lets you track your work time easily.
