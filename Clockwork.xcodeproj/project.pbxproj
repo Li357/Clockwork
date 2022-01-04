@@ -8,18 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		CB26111E2784044800959C28 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB26111D2784044800959C28 /* AppDelegate.swift */; };
-		CB2611202784044800959C28 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB26111F2784044800959C28 /* ViewController.swift */; };
 		CB2611222784044900959C28 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB2611212784044900959C28 /* Assets.xcassets */; };
-		CB2611252784044900959C28 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB2611232784044900959C28 /* Main.storyboard */; };
+		CB2611332785094E00959C28 /* StatusBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2611322785094E00959C28 /* StatusBarController.swift */; };
+		CB26113527850A2A00959C28 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB26113427850A2A00959C28 /* main.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		CB26111A2784044800959C28 /* Clockwork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Clockwork.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB26111D2784044800959C28 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CB26111F2784044800959C28 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CB2611212784044900959C28 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		CB2611242784044900959C28 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CB2611262784044900959C28 /* Clockwork.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Clockwork.entitlements; sourceTree = "<group>"; };
+		CB2611322785094E00959C28 /* StatusBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBarController.swift; sourceTree = "<group>"; };
+		CB26113427850A2A00959C28 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,10 +53,10 @@
 			isa = PBXGroup;
 			children = (
 				CB26111D2784044800959C28 /* AppDelegate.swift */,
-				CB26111F2784044800959C28 /* ViewController.swift */,
 				CB2611212784044900959C28 /* Assets.xcassets */,
-				CB2611232784044900959C28 /* Main.storyboard */,
 				CB2611262784044900959C28 /* Clockwork.entitlements */,
+				CB2611322785094E00959C28 /* StatusBarController.swift */,
+				CB26113427850A2A00959C28 /* main.swift */,
 			);
 			path = Clockwork;
 			sourceTree = "<group>";
@@ -120,7 +120,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB2611222784044900959C28 /* Assets.xcassets in Resources */,
-				CB2611252784044900959C28 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,23 +130,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CB2611202784044800959C28 /* ViewController.swift in Sources */,
+				CB2611332785094E00959C28 /* StatusBarController.swift in Sources */,
 				CB26111E2784044800959C28 /* AppDelegate.swift in Sources */,
+				CB26113527850A2A00959C28 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		CB2611232784044900959C28 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CB2611242784044900959C28 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		CB2611272784044900959C28 /* Debug */ = {
@@ -277,8 +266,8 @@
 				DEVELOPMENT_TEAM = 72B5RY475W;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.business";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -304,8 +293,8 @@
 				DEVELOPMENT_TEAM = 72B5RY475W;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.business";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
