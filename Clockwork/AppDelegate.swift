@@ -8,7 +8,7 @@
 import AppKit
 
 class AppDelegate: NSObject, NSApplicationDelegate {
-    private var statusBarController: StatusBarController?
+    var statusBarController: StatusBarController?
     
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         statusBarController = StatusBarController()

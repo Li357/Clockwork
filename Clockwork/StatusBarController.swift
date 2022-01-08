@@ -14,6 +14,7 @@ class StatusBarController {
     
     private var statusBarItem: NSStatusItem
     private var menuStatusBarItem: NSStatusItem
+    private var saveCurrentEntryItem: NSMenuItem
     private var menu: NSMenu
     
     private var timer: Timer?
@@ -34,6 +35,7 @@ class StatusBarController {
         set {
             _currTime = newValue
             statusBarItem.button?.title = convertToTimeString(_currTime)
+            saveCurrentEntryItem.isEnabled = _currTime > 0
         }
     }
     
@@ -45,8 +47,9 @@ class StatusBarController {
         statusBarItem.button?.imagePosition = .imageLeft
         
         menu = NSMenu(title: "Clockwork Settings")
+        menu.autoenablesItems = false
         let openTimesheetItem = menu.addItem(withTitle: "Open Timesheet", action: #selector(openTimesheet), keyEquivalent: "")
-        let saveCurrentEntryItem = menu.addItem(withTitle: "Save Current Time", action: #selector(addToDatabase), keyEquivalent: "")
+        saveCurrentEntryItem = menu.addItem(withTitle: "Save Current Time", action: #selector(addCurrentEntry), keyEquivalent: "")
         let quitItem = menu.addItem(withTitle: "Quit Clockwork", action: #selector(quitClockwork), keyEquivalent: "q")
         
         menuStatusBarItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
@@ -68,7 +71,9 @@ class StatusBarController {
     }
     
     func cleanUp() throws {
-        try addToDatabase()
+        if (currTime > 0) {
+            try addCurrentEntry()
+        }
     }
     
     @objc private func toggleTimer() {
@@ -94,11 +99,12 @@ class StatusBarController {
         timesheetWindow!.title = "Clockwork Timesheet"
         timesheetWindow!.center()
         timesheetWindow!.contentView = NSHostingView(rootView: TimesheetView(entries: dbController.entries))
+        timesheetWindow!.makeKeyAndOrderFront(self)
         timesheetWindow!.orderFrontRegardless()
         timesheetWindow!.isReleasedWhenClosed = false
     }
     
-    @objc private func addToDatabase() throws {
+    @objc private func addCurrentEntry() throws {
         let entry = Entry(date: Date(), duration: currTime)
         try dbController.add(entry: entry)
         currTime = 0
