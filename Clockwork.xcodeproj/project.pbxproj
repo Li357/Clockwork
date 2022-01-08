@@ -7,19 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		79BDA5CD4EBF2C8399B9CE86 /* Pods_Clockwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E21A0BDA4647B9E1FE58BD55 /* Pods_Clockwork.framework */; };
 		CB26111E2784044800959C28 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB26111D2784044800959C28 /* AppDelegate.swift */; };
 		CB2611222784044900959C28 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB2611212784044900959C28 /* Assets.xcassets */; };
 		CB2611332785094E00959C28 /* StatusBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2611322785094E00959C28 /* StatusBarController.swift */; };
 		CB26113527850A2A00959C28 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB26113427850A2A00959C28 /* main.swift */; };
+		CB26113727850DA600959C28 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB26113627850DA600959C28 /* Utilities.swift */; };
+		CB261139278511EE00959C28 /* TimesheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB261138278511EE00959C28 /* TimesheetView.swift */; };
+		CB26113B27855FAE00959C28 /* DatabaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB26113A27855FAE00959C28 /* DatabaseController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		954A984D2583DC1F62003011 /* Pods-Clockwork.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Clockwork.debug.xcconfig"; path = "Target Support Files/Pods-Clockwork/Pods-Clockwork.debug.xcconfig"; sourceTree = "<group>"; };
 		CB26111A2784044800959C28 /* Clockwork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Clockwork.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB26111D2784044800959C28 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CB2611212784044900959C28 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CB2611262784044900959C28 /* Clockwork.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Clockwork.entitlements; sourceTree = "<group>"; };
 		CB2611322785094E00959C28 /* StatusBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBarController.swift; sourceTree = "<group>"; };
 		CB26113427850A2A00959C28 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		CB26113627850DA600959C28 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		CB261138278511EE00959C28 /* TimesheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimesheetView.swift; sourceTree = "<group>"; };
+		CB26113A27855FAE00959C28 /* DatabaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseController.swift; sourceTree = "<group>"; };
+		E21A0BDA4647B9E1FE58BD55 /* Pods_Clockwork.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Clockwork.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F927F4FE0AE867B9E0D8DBFA /* Pods-Clockwork.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Clockwork.release.xcconfig"; path = "Target Support Files/Pods-Clockwork/Pods-Clockwork.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,17 +37,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79BDA5CD4EBF2C8399B9CE86 /* Pods_Clockwork.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3BC5709EB9B309F477628997 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E21A0BDA4647B9E1FE58BD55 /* Pods_Clockwork.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		86A5CBFDAC8A2F7C6E06E134 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				954A984D2583DC1F62003011 /* Pods-Clockwork.debug.xcconfig */,
+				F927F4FE0AE867B9E0D8DBFA /* Pods-Clockwork.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		CB2611112784044800959C28 = {
 			isa = PBXGroup;
 			children = (
 				CB26111C2784044800959C28 /* Clockwork */,
 				CB26111B2784044800959C28 /* Products */,
+				86A5CBFDAC8A2F7C6E06E134 /* Pods */,
+				3BC5709EB9B309F477628997 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,6 +87,9 @@
 				CB2611262784044900959C28 /* Clockwork.entitlements */,
 				CB2611322785094E00959C28 /* StatusBarController.swift */,
 				CB26113427850A2A00959C28 /* main.swift */,
+				CB26113627850DA600959C28 /* Utilities.swift */,
+				CB261138278511EE00959C28 /* TimesheetView.swift */,
+				CB26113A27855FAE00959C28 /* DatabaseController.swift */,
 			);
 			path = Clockwork;
 			sourceTree = "<group>";
@@ -68,9 +101,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CB2611292784044900959C28 /* Build configuration list for PBXNativeTarget "Clockwork" */;
 			buildPhases = (
+				910B45533AE3BCC0319D947C /* [CP] Check Pods Manifest.lock */,
 				CB2611162784044800959C28 /* Sources */,
 				CB2611172784044800959C28 /* Frameworks */,
 				CB2611182784044800959C28 /* Resources */,
+				20A6DE696399566D10DA9E8C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -125,14 +160,59 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		20A6DE696399566D10DA9E8C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Clockwork/Pods-Clockwork-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Clockwork/Pods-Clockwork-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Clockwork/Pods-Clockwork-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		910B45533AE3BCC0319D947C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Clockwork-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		CB2611162784044800959C28 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB26113B27855FAE00959C28 /* DatabaseController.swift in Sources */,
 				CB2611332785094E00959C28 /* StatusBarController.swift in Sources */,
 				CB26111E2784044800959C28 /* AppDelegate.swift in Sources */,
 				CB26113527850A2A00959C28 /* main.swift in Sources */,
+				CB261139278511EE00959C28 /* TimesheetView.swift in Sources */,
+				CB26113727850DA600959C28 /* Utilities.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,6 +336,7 @@
 		};
 		CB26112A2784044900959C28 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 954A984D2583DC1F62003011 /* Pods-Clockwork.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -283,6 +364,7 @@
 		};
 		CB26112B2784044900959C28 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F927F4FE0AE867B9E0D8DBFA /* Pods-Clockwork.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
